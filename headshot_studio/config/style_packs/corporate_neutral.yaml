@@ -1,0 +1,7 @@
+name: Corporate Neutral
+prompt_template: >
+  professional corporate headshot of {subject}, neutral studio backdrop,
+  soft key light, 85mm lens, shallow depth of field, sharp focus on eyes
+negative_prompt: cartoon, illustration, extra fingers, watermark, text
+lora: null
+strength: 0.65
