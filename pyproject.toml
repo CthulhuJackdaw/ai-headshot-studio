@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-headshot-studio"
+version = "0.6.2"
+description = "Windows desktop studio for generating AI headshots and portrait variants."
+readme = "CONTRIBUTING.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "ai-headshot-studio contributors" }]
+dependencies = [
+  "numpy>=1.26",
+  "pillow>=10.2",
+  "pydantic>=2.6",
+  "pyyaml>=6.0",
+  "typer>=0.12",
+  "rich>=13.7",
+  "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+torch = ["torch>=2.3", "torchvision>=0.18", "diffusers>=0.27"]
+onnx = ["onnxruntime-gpu>=1.17"]
+dev = ["pytest>=8.0", "ruff>=0.4", "mypy>=1.9"]
+
+[project.scripts]
+headshot-studio = "headshot_studio.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["headshot_studio*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
