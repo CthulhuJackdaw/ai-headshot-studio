@@ -1,0 +1,12 @@
+backend: onnx
+device: cuda
+models_dir: models/weights
+outputs_dir: outputs
+render:
+  width: 1024
+  height: 1024
+  steps: 28
+  guidance: 5.5
+  sampler: dpmpp_2m
+  seed: -1
+cloud_endpoint: null
