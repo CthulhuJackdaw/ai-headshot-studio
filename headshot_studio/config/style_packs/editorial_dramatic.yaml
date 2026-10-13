@@ -1,0 +1,7 @@
+name: Editorial Dramatic
+prompt_template: >
+  editorial portrait of {subject}, dramatic side light, deep shadows,
+  dark backdrop, 105mm lens, film grain, magazine cover quality
+negative_prompt: flat lighting, snapshot, blurry, watermark
+lora: editorial_v3.safetensors
+strength: 0.72
